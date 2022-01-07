@@ -10,15 +10,21 @@ import 'antd/dist/antd.css'
 import './App.css'
 
 enum Page {
-  GENERAL = 'genneral',
+  GENERAL = 'general',
   EXPERIENCE = 'experience',
   EDUCATION = 'education',
   PROJECTS = 'projects',
   CONTACT = 'contact'
 }
 
+enum Localization {
+  FI = 'fi',
+  EN = 'en'
+}
+
 const App: React.FC = () => {
   const [page, setPage] = React.useState<Page>(Page.GENERAL)
+  const [localication, setLocalization] = React.useState<Localization>(Localization.FI) // TODO
 
   const getPageComponent = () => {
     switch (page) {
@@ -58,7 +64,7 @@ const App: React.FC = () => {
 
       <ParticlesBg
         type='cobweb'
-        num={200}
+        num={50}
         color='#000000'
         bg
       />

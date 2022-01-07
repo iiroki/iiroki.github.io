@@ -6,7 +6,7 @@ import rasputin from '../assets/rasputin.png'
 const ProjectPage: React.FC = () => (
   <PageBase>
     <Card
-      title='Rasputin'
+      title={<b>Rasputin</b>}
       cover={<img src={rasputin} alt='Rasputin-teekkarilaulukirja'/>}
       hoverable
       style={{ width: 240 }}
