@@ -1,6 +1,6 @@
 {
-  "name": "cv",
-  "homepage": "https://iiroki.github.io/cv",
+  "name": "iiroki-cv",
+  "homepage": "https://iiroki.github.io",
   "version": "0.1.0",
   "scripts": {
     "start": "react-scripts start",
