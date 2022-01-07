@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.04b3935c.css",
+    "main.js": "/static/js/main.6b722525.js",
+    "static/js/787.20a534d5.chunk.js": "/static/js/787.20a534d5.chunk.js",
+    "static/media/rasputin.png": "/static/media/rasputin.a110cb4e544e10f69325.png",
+    "static/media/iiro_kiviluoma.jpg": "/static/media/iiro_kiviluoma.3245f4c72543799adcec.jpg",
+    "index.html": "/index.html",
+    "main.04b3935c.css.map": "/static/css/main.04b3935c.css.map",
+    "main.6b722525.js.map": "/static/js/main.6b722525.js.map",
+    "787.20a534d5.chunk.js.map": "/static/js/787.20a534d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04b3935c.css",
+    "static/js/main.6b722525.js"
+  ]
+}
