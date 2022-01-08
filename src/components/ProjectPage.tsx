@@ -13,12 +13,13 @@ const ProjectPage: React.FC = () => (
           rel='noopener noreferrer'
         >
           <Card
+            className='project'
             key={i.title}
             hoverable
             cover={i.image && <img src={i.image} alt={i.title} />}
             style={{ width: '100%' }}
             >
-            <Card.Meta title={<h4><b>Rasputin</b></h4>} />
+            <Card.Meta title={<h3>{i.title}</h3>} />
             <Card.Meta description={i.description} />
           </Card>
         </a>

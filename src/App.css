@@ -28,6 +28,11 @@ body {
 
 .cv-image {
   height: calc((var(--app-height) - 50px) / 2) !important;
+  border-radius: 10px;
+}
+
+.skill-tag {
+  font-size: 16px;
 }
 
 .timeline {
@@ -47,6 +52,10 @@ body {
 
 .timeline-list {
   font-size: 14px;
+}
+
+.project {
+  margin: 10px;
 }
 
 /* ANTD overrides */
