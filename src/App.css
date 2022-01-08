@@ -1,10 +1,31 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: local('OpenSans'), url(./fonts/OpenSans.ttf), format('truetype');
+}
+
+body {
+  font-family: OpenSans;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .page-wrapper {
-  margin: 1% 2.5%;
+  max-height: calc(var(--app-height) - 50px) !important;
+  overflow-y: auto;
 }
 
 .page-content {
+  margin: 1% 2.5%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
   text-align: center;
+}
+
+.ant-tabs {
+  height: 50px !important;
 }
 
 .ant-tabs-tab {

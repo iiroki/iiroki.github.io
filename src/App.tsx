@@ -26,6 +26,10 @@ const App: React.FC = () => {
   const [page, setPage] = React.useState<Page>(Page.GENERAL)
   const [localication, setLocalization] = React.useState<Localization>(Localization.FI) // TODO
 
+  const setAppHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+  window.addEventListener('resize', setAppHeight)
+  setAppHeight()
+
   const getPageComponent = () => {
     switch (page) {
       case Page.GENERAL:
@@ -51,7 +55,7 @@ const App: React.FC = () => {
         animated
         activeKey={page}
         onChange={key => setPage(key as Page)}
-        tabBarStyle={{ backgroundColor: '#1a2f43', color: '#ffffff' }}
+        tabBarStyle={{ backgroundColor: '#1a2f43', color: '#ffffff', height: 50 }}
       >
         <Tabs.TabPane key={Page.GENERAL} tab='Yleistä' />
         <Tabs.TabPane key={Page.EXPERIENCE} tab='Työkokemus' />
@@ -65,7 +69,7 @@ const App: React.FC = () => {
       <ParticlesBg
         type='cobweb'
         num={50}
-        color='#3881ae'
+        color='#3a668b'
         bg
       />
     </>
