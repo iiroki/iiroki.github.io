@@ -5,7 +5,7 @@ import picture from '../assets/iiro_kiviluoma.jpg'
 
 const GeneralPage: React.FC = () => (
   <PageBase>
-    <Image src={picture} />
+    <Image className='cv-image' src={picture} />
     <h1>
       Iiro Kiviluoma
     </h1>

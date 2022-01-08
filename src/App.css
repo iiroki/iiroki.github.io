@@ -5,6 +5,7 @@
 
 body {
   font-family: OpenSans;
+  font-size: 16px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,6 +14,7 @@ body {
 .page-wrapper {
   max-height: calc(var(--app-height) - 50px) !important;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .page-content {
@@ -24,6 +26,34 @@ body {
   text-align: center;
 }
 
+.cv-image {
+  height: calc((var(--app-height) - 50px) / 2) !important;
+}
+
+.timeline {
+  padding: 2.5% 1%;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.timeline-title-main {
+  font-size: 20px;
+  margin-bottom: 1px;
+}
+
+.timeline-title-sub {
+  font-size: 18px;
+  color: #3e3e3e;
+  margin-bottom: 1px;
+  margin-left: 10px;
+}
+
+.timeline-list {
+  font-size: 16px;
+  color: #3e3e3e;
+}
+
+/* ANTD overrides */
 .ant-tabs {
   height: 50px !important;
 }
@@ -31,4 +61,12 @@ body {
 .ant-tabs-tab {
   padding-left: 10px !important;
   padding-right: 10px !important;
+}
+
+.ant-timeline-item-tail {
+  border-color: #346889;
+}
+
+.ant-timeline-item-head {
+  background-color: transparent;
 }

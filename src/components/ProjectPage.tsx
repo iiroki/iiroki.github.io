@@ -1,18 +1,23 @@
 import React from 'react'
 import { Card } from 'antd'
 import PageBase from './PageBase'
-import rasputin from '../assets/rasputin.png'
+import CV from '../CV'
 
 const ProjectPage: React.FC = () => (
   <PageBase>
-    <Card
-      cover={<img src={rasputin} alt='Rasputin-teekkarilaulukirja'/>}
-      hoverable
-      style={{ width: 240 }}
-    >
-      <Card.Meta title={<h4><b>Rasputin</b></h4>} />
-      <Card.Meta description='Rasputin-teekkarilaulukirja...' />
-    </Card>
+    {
+      CV.PROJECTS.map(i => (
+        <Card
+          key={i.title}
+          cover={i.image && <img src={i.image} alt={i.title} />}
+          hoverable
+          style={{ width: 240 }}
+        >
+          <Card.Meta title={<h4><b>Rasputin</b></h4>} />
+          <Card.Meta description={i.description} />
+        </Card>
+      ))
+    }
   </PageBase>
 )
 
