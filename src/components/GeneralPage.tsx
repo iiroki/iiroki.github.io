@@ -1,16 +1,16 @@
 import React from 'react'
 import { Image } from 'antd'
 import PageBase from './PageBase'
-import picture from '../assets/iiro_kiviluoma.jpg'
+import CV from '../CV'
 
 const GeneralPage: React.FC = () => (
   <PageBase>
-    <Image className='cv-image' src={picture} />
+    <Image className='cv-image' src={CV.GENERAL.image} />
     <h1>
-      Iiro Kiviluoma
+      {CV.GENERAL.name}
     </h1>
     <p>
-      Opiskelen tietotekniikan DI-opintoja Tampereen yliopistossa...
+      {CV.GENERAL.description}
     </p>
   </PageBase>
 )

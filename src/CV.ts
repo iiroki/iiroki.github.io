@@ -1,4 +1,11 @@
+import iiro from './assets/iiro_kiviluoma.jpg'
 import rasputin from './assets/rasputin.png'
+
+interface GeneralInfo {
+  readonly name: string
+  readonly description: string
+  readonly image: string
+}
 
 interface TimelineItem {
   readonly timeSpan: string
@@ -12,22 +19,40 @@ interface CardItem {
   readonly title: string
   readonly description?: string
   readonly image?: string
+  readonly link?: string
+}
+
+interface ContactInfo {
+  readonly email: string
+  readonly phoneNumber: string
+  readonly address: string
 }
 
 interface CurriculumVitae {
+  readonly GENERAL: GeneralInfo
   readonly EXPERIENCE: TimelineItem[]
   readonly EDUCATION: TimelineItem[]
   readonly PROJECTS: CardItem[]
 }
 
 const CV: CurriculumVitae = {
+  GENERAL: {
+    name: 'Iiro Kiviluoma',
+    description: `
+      Hei! Olen 24-vuotias tietotekniikan DI-opiskelija Tampereelta ja tavoitteenani on kasvaa
+      ohjelmistotuotannon rautaiseksi ammattilaiseksi. Tällä hetkellä teen myös oman alan töitä
+      opintojeni ohella ja vapaa-aikaani olen käyttänyt omien, lähinnä web-pohjaisten,
+      ohjelmistoprojektien väsäämiseen.
+    `,
+    image: iiro
+  },
   EXPERIENCE: [
     {
       timeSpan: '2021/05 -',
       mainTitle: 'Insta',
       subTitle: 'Ohjelmistosuunnittelija Trainee',
       listItems: [
-        'Ohjelmistokehitys (Java)',
+        'Ohjelmistokehitys (Java, Sping Beans, Maven, SQL)',
         'Ohjelmistosuunnittelu asiakasvaatimusten pohjalta'
       ],
       color: '#004b95'
@@ -46,7 +71,7 @@ const CV: CurriculumVitae = {
     {
       timeSpan: '2019/05 - 2019/09',
       mainTitle: 'Ferrum Steel',
-      subTitle: 'CNC-plasmaleikkaaja',
+      subTitle: 'Plasmaleikkaaja (CNC)',
       color: '#ad0f0a'
     },
     {
@@ -66,8 +91,14 @@ const CV: CurriculumVitae = {
   PROJECTS: [
     {
       title: 'Rasputin',
-      description: 'Rasputin-teekkarilaulukirja...',
-      image: rasputin
+      description: `
+        Rasputin-teekkarilaulukirja on Tampereen teekkariyhteisössä laajalti käytössä oleva laulukirja,
+        jolle toteutin full stack -web-sovelluksen. Toteutus sisältää palvelimen ja kaksi käyttöliittymää:
+        varsinainen laulukirja ja sisällön hallintapaneeli. Käytetyt tekniikat: TypeScript, React, Redux,
+        Node.js, Express.
+      `,
+      image: rasputin,
+      link: 'https://rasputin.fi'
     }
   ]
 }

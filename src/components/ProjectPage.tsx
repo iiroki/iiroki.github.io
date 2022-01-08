@@ -7,15 +7,21 @@ const ProjectPage: React.FC = () => (
   <PageBase>
     {
       CV.PROJECTS.map(i => (
-        <Card
-          key={i.title}
-          cover={i.image && <img src={i.image} alt={i.title} />}
-          hoverable
-          style={{ width: 240 }}
+        <a
+          href={i.link}
+          target='_blank'
+          rel='noopener noreferrer'
         >
-          <Card.Meta title={<h4><b>Rasputin</b></h4>} />
-          <Card.Meta description={i.description} />
-        </Card>
+          <Card
+            key={i.title}
+            hoverable
+            cover={i.image && <img src={i.image} alt={i.title} />}
+            style={{ width: '100%' }}
+            >
+            <Card.Meta title={<h4><b>Rasputin</b></h4>} />
+            <Card.Meta description={i.description} />
+          </Card>
+        </a>
       ))
     }
   </PageBase>

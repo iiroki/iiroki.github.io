@@ -31,9 +31,8 @@ body {
 }
 
 .timeline {
-  padding: 2.5% 1%;
-  align-items: flex-start;
-  text-align: start;
+  padding: 2.5%;
+  line-height: 1.2;
 }
 
 .timeline-title-main {
@@ -42,15 +41,12 @@ body {
 }
 
 .timeline-title-sub {
-  font-size: 18px;
-  color: #3e3e3e;
+  font-size: 16px;
   margin-bottom: 1px;
-  margin-left: 10px;
 }
 
 .timeline-list {
-  font-size: 16px;
-  color: #3e3e3e;
+  font-size: 14px;
 }
 
 /* ANTD overrides */
