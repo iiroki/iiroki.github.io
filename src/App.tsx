@@ -51,7 +51,7 @@ const App: React.FC = () => {
         animated
         activeKey={page}
         onChange={key => setPage(key as Page)}
-        tabBarStyle={{ backgroundColor: 'white' }}
+        tabBarStyle={{ backgroundColor: '#1a2f43', color: '#ffffff' }}
       >
         <Tabs.TabPane key={Page.GENERAL} tab='Yleistä' />
         <Tabs.TabPane key={Page.EXPERIENCE} tab='Työkokemus' />
@@ -65,7 +65,7 @@ const App: React.FC = () => {
       <ParticlesBg
         type='cobweb'
         num={50}
-        color='#000000'
+        color='#3881ae'
         bg
       />
     </>
