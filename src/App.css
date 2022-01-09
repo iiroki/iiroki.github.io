@@ -12,7 +12,7 @@ body {
 }
 
 .page-wrapper {
-  max-height: calc(var(--app-height) - 50px) !important;
+  height: calc(var(--app-height) - 50px) !important;
   overflow-y: auto;
   overflow-x: hidden;
 }

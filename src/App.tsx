@@ -23,31 +23,41 @@ enum Localization {
   EN = 'en'
 }
 
-enum SwipeDirection {
-  RIGHT,
-  LEFT
-}
-
-const pages = Object.values(Page)
+const SWIPEABLE_ID = 'swipeable'
 
 const App: React.FC = () => {
   const [page, setPage] = React.useState<Page>(Page.GENERAL)
   const [localication, setLocalization] = React.useState<Localization>(Localization.FI) // TODO
 
-  const handleSwipe = (direction: SwipeDirection) => {
-    const currentPageIndex = pages.indexOf(page)
-    const newPageIndex = currentPageIndex + (direction === SwipeDirection.LEFT ? 1 : -1)
-    if (newPageIndex >= 0 && newPageIndex <= pages.length - 1) {
-      setPage(pages[newPageIndex])
+  // Swipe navigation
+  React.useEffect(() => {
+    const handleSwipeNext = (e: any) => {
+      if (page !== Page.CONTACT) {
+        setPage(Object.values(Page)[Object.values(Page).indexOf(page) + 1])
+      }
     }
-  }
-  
-  const setAppHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
-  setAppHeight()
 
-  window.addEventListener('swiped-left', () => handleSwipe(SwipeDirection.LEFT))
-  window.addEventListener('swiped-right', () => handleSwipe(SwipeDirection.RIGHT))
+    const handleSwipePrev = (e: any) => {
+      if (page !== Page.GENERAL) {
+        setPage(Object.values(Page)[Object.values(Page).indexOf(page) - 1])
+      }
+    }
+
+    const swipeable = document.getElementById(SWIPEABLE_ID)
+    if (swipeable) {
+      swipeable.addEventListener('swiped-left', handleSwipeNext)
+      swipeable.addEventListener('swiped-right', handleSwipePrev)
+      return () => {
+        swipeable.removeEventListener('swiped-left', handleSwipeNext)
+        swipeable.removeEventListener('swiped-right', handleSwipePrev)
+      }
+    }
+  }, [page])
+
+  // App height
+  const setAppHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
   window.addEventListener('resize', setAppHeight)
+  setAppHeight()
 
   const getPageComponent = () => {
     switch (page) {
@@ -83,7 +93,9 @@ const App: React.FC = () => {
         <Tabs.TabPane key={Page.CONTACT} tab='Yhteystiedot' />
       </Tabs>
 
-      {getPageComponent()}
+      <div id={SWIPEABLE_ID}>
+        {getPageComponent()}
+      </div>
 
       <ParticlesBg
         type='cobweb'
