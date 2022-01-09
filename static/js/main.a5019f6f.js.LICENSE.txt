@@ -11,6 +11,15 @@ object-assign
 */
 
 /*!
+ * swiped-events.js - v1.1.6
+ * Pure JavaScript swipe events
+ * https://github.com/john-doherty/swiped-events
+ * @inspiration https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element
+ * @author John Doherty <www.johndoherty.info>
+ * @license MIT
+ */
+
+/*!
 * Proton v4.2.1
 * https://github.com/drawcall/Proton
 *
