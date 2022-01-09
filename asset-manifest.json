@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.73e24916.css",
-    "main.js": "/static/js/main.a5019f6f.js",
+    "main.css": "/static/css/main.dc4bcc07.css",
+    "main.js": "/static/js/main.e7d3d9d8.js",
     "static/js/787.d050d235.chunk.js": "/static/js/787.d050d235.chunk.js",
     "static/media/OpenSans.ttf": "/static/media/OpenSans.a42bbe687810bdc6e9e8.ttf",
     "static/media/rasputin.png": "/static/media/rasputin.a110cb4e544e10f69325.png",
     "static/media/event-calendar-fullstack.png": "/static/media/event-calendar-fullstack.5cd3e010d69c03f59607.png",
     "static/media/iiro_kiviluoma.jpg": "/static/media/iiro_kiviluoma.3245f4c72543799adcec.jpg",
     "index.html": "/index.html",
-    "main.73e24916.css.map": "/static/css/main.73e24916.css.map",
-    "main.a5019f6f.js.map": "/static/js/main.a5019f6f.js.map",
+    "main.dc4bcc07.css.map": "/static/css/main.dc4bcc07.css.map",
+    "main.e7d3d9d8.js.map": "/static/js/main.e7d3d9d8.js.map",
     "787.d050d235.chunk.js.map": "/static/js/787.d050d235.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.73e24916.css",
-    "static/js/main.a5019f6f.js"
+    "static/css/main.dc4bcc07.css",
+    "static/js/main.e7d3d9d8.js"
   ]
 }
