@@ -15,7 +15,7 @@ const GeneralPage: React.FC = () => (
     <h2>Osaaminen</h2>
     {
       CV.GENERAL.skills.map(i => (
-        <Tag  className='skill-tag' key={i}>{i}</Tag>
+        <Tag className='skill-tag' key={i}>{i}</Tag>
       ))
     }
   </PageBase>

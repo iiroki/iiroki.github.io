@@ -8,13 +8,13 @@ const ProjectPage: React.FC = () => (
     {
       CV.PROJECTS.map(i => (
         <a
+          key={i.title}
           href={i.link}
           target='_blank'
           rel='noopener noreferrer'
         >
           <Card
             className='project'
-            key={i.title}
             hoverable
             cover={i.image && <img src={i.image} alt={i.title} />}
             style={{ width: '100%' }}

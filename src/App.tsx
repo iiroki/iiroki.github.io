@@ -1,6 +1,7 @@
 import React from 'react'
 import { Tabs } from 'antd'
 import ParticlesBg from 'particles-bg'
+import 'swiped-events/dist/swiped-events.min.js'
 import GeneralPage from './components/GeneralPage'
 import ExperiencePage from './components/ExperiencePage'
 import EducationPage from './components/EducationPage'
@@ -22,13 +23,31 @@ enum Localization {
   EN = 'en'
 }
 
+enum SwipeDirection {
+  RIGHT,
+  LEFT
+}
+
+const pages = Object.values(Page)
+
 const App: React.FC = () => {
   const [page, setPage] = React.useState<Page>(Page.GENERAL)
   const [localication, setLocalization] = React.useState<Localization>(Localization.FI) // TODO
 
+  const handleSwipe = (direction: SwipeDirection) => {
+    const currentPageIndex = pages.indexOf(page)
+    const newPageIndex = currentPageIndex + (direction === SwipeDirection.LEFT ? 1 : -1)
+    if (newPageIndex >= 0 && newPageIndex <= pages.length - 1) {
+      setPage(pages[newPageIndex])
+    }
+  }
+  
   const setAppHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
-  window.addEventListener('resize', setAppHeight)
   setAppHeight()
+
+  window.addEventListener('swiped-left', () => handleSwipe(SwipeDirection.LEFT))
+  window.addEventListener('swiped-right', () => handleSwipe(SwipeDirection.RIGHT))
+  window.addEventListener('resize', setAppHeight)
 
   const getPageComponent = () => {
     switch (page) {
