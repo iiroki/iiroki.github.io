@@ -31,13 +31,13 @@ const App: React.FC = () => {
 
   // Swipe navigation
   React.useEffect(() => {
-    const handleSwipeNext = (e: any) => {
+    const handleSwipeNext = () => {
       if (page !== Page.CONTACT) {
         setPage(Object.values(Page)[Object.values(Page).indexOf(page) + 1])
       }
     }
 
-    const handleSwipePrev = (e: any) => {
+    const handleSwipePrev = () => {
       if (page !== Page.GENERAL) {
         setPage(Object.values(Page)[Object.values(Page).indexOf(page) - 1])
       }

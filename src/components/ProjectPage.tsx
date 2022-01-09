@@ -5,6 +5,7 @@ import CV from '../CV'
 
 const ProjectPage: React.FC = () => (
   <PageBase>
+    <h1 className='page-title'>Projektit</h1>
     {
       CV.PROJECTS.map(i => (
         <a

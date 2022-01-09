@@ -1,3 +1,12 @@
+/*
+ * COLOR SCHEME
+ *
+ * Main color: #1a2f43 (Dark blue)
+ * Secondary color: #3a668b (Darkish blue)
+ * ANTD main color: #1890ff (Light blue)
+ * BG color: #000000 (white)
+ */
+
 @font-face {
   font-family: 'OpenSans';
   src: local('OpenSans'), url(./fonts/OpenSans.ttf), format('truetype');
@@ -18,7 +27,7 @@ body {
 }
 
 .page-content {
-  margin: 1% 2.5%;
+  margin: 0 2.5%;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -26,6 +35,16 @@ body {
   text-align: center;
 }
 
+.page-content-padding {
+  padding: 1% 2.5%;
+}
+
+.page-title {
+  color: #3a668b;
+  font-weight: bold;
+}
+
+/* General */
 .cv-image {
   height: calc((var(--app-height) - 50px) / 2) !important;
   border-radius: 10px;
@@ -35,8 +54,8 @@ body {
   font-size: 16px;
 }
 
+/* Experience & Education */
 .timeline {
-  padding: 2.5%;
   line-height: 1.2;
 }
 
@@ -54,8 +73,24 @@ body {
   font-size: 14px;
 }
 
+/* Projects */
 .project {
   margin: 10px;
+}
+
+/* Contact */
+.contact-info {
+  font-size: 16px;
+}
+
+.social-bar {
+  margin-top: 20px;
+}
+
+.contact-icon {
+  color: #3a668b;
+  font-size: 40px;
+  margin: 0 10px;
 }
 
 /* ANTD overrides */
@@ -69,7 +104,7 @@ body {
 }
 
 .ant-timeline-item-tail {
-  border-color: #346889;
+  border-color: #3a668b;
 }
 
 .ant-timeline-item-head {

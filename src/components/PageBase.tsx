@@ -8,7 +8,9 @@ const PageBase: React.FC = ({ children }) => (
     animate={{ opacity: 1, x: 0 }}
   >
     <div className='page-content'>
-      {children}
+      <div className='page-content-padding'>
+        {children}
+      </div>
     </div>
   </motion.div>
 )

@@ -1,3 +1,5 @@
+import { EventTimelineItem } from './interfaces/EventTimelineItem'
+import { Social } from './interfaces/Social'
 import iiro from './assets/iiro_kiviluoma.jpg'
 import rasputin from './assets/rasputin.png'
 import eventCalendar from './assets/event-calendar-fullstack.png'
@@ -9,14 +11,6 @@ interface GeneralInfo {
   readonly skills: string[]
 }
 
-interface TimelineItem {
-  readonly timeSpan: string
-  readonly mainTitle: string
-  readonly subTitle?: string
-  readonly listItems?: string[]
-  readonly color?: string
-}
-
 interface CardItem {
   readonly title: string
   readonly description?: string
@@ -26,15 +20,17 @@ interface CardItem {
 
 interface ContactInfo {
   readonly email: string
-  readonly phoneNumber: string
-  readonly address: string
+  readonly phone?: string
+  readonly address?: string
+  readonly social?: Social
 }
 
 interface CurriculumVitae {
   readonly GENERAL: GeneralInfo
-  readonly EXPERIENCE: TimelineItem[]
-  readonly EDUCATION: TimelineItem[]
+  readonly EXPERIENCE: EventTimelineItem[]
+  readonly EDUCATION: EventTimelineItem[]
   readonly PROJECTS: CardItem[]
+  readonly CONTACT: ContactInfo
 }
 
 const CV: CurriculumVitae = {
@@ -103,7 +99,29 @@ const CV: CurriculumVitae = {
       color: '#18a949'
     }
   ],
-  EDUCATION: [],
+  EDUCATION: [
+    {
+      timeSpan: '2021/01 -',
+      mainTitle: 'Tampereen yliopisto',
+      subTitle: 'Tietotekniikan diplomi-insinööri (120 op)',
+      listItems: ['Pääaine: Ohjelmistotuotanto'],
+      color: '#4e008e'
+    },
+    {
+      timeSpan: '2017/09 - 2020/12',
+      mainTitle: 'Tampereen yliopisto',
+      subTitle: 'Konetekniikan kandidaatti (180 op)',
+      listItems: [
+        'Pääaine: Kone- ja tuotantotekniikka',
+        'Sivuaine: Ohjelmistotekniikka'
+      ],
+      color: '#4e008e'
+    },
+    {
+      timeSpan: '...',
+      mainTitle: 'TODO'
+    }
+  ],
   PROJECTS: [
     {
       title: 'Rasputin',
@@ -130,7 +148,17 @@ const CV: CurriculumVitae = {
       image: eventCalendar,
       link: 'https://github.com/iiroki-projects/event-calendar-fullstack'
     }
-  ]
+  ],
+  CONTACT: {
+    email: 'iirokiviluoma@outlook.com',
+    phone: '+358 0 417 6832',
+    social: {
+      gitHub: 'https://github.com/iiroki',
+      linkedIn: 'https://www.linkedin.com/in/iiroki/',
+      facebook: 'https://www.facebook.com/iiro.kiviluoma/',
+      instagram: 'https://www.instagram.com/iirokiviluoma/'
+    }
+  }
 }
 
 export default CV
