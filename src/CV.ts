@@ -4,11 +4,17 @@ import iiro from './assets/iiro_kiviluoma.jpg'
 import rasputin from './assets/rasputin.png'
 import eventCalendar from './assets/event-calendar-fullstack.png'
 
+interface Skills {
+  readonly major: string[]
+  readonly minor: string[]
+}
+
 interface GeneralInfo {
   readonly name: string
-  readonly description: string
   readonly image: string
-  readonly skills: string[]
+  readonly description: string
+  readonly about?: string
+  readonly skills: Skills
 }
 
 interface CardItem {
@@ -36,27 +42,32 @@ interface CurriculumVitae {
 const CV: CurriculumVitae = {
   GENERAL: {
     name: 'Iiro Kiviluoma',
+    image: iiro,
     description: `
       Hei! Olen 24-vuotias tietotekniikan DI-opiskelija Tampereelta ja tavoitteenani on kasvaa
-      ohjelmistotuotannon rautaiseksi ammattilaiseksi. Teen tällä hetkellä myös oman alani töitä
-      opintojeni ohella ja vapaa-aikaani olen käyttänyt omien, lähinnä web-pohjaisten,
+      ohjelmistotuotannon rautaiseksi ammattilaiseksi. Teen tällä hetkellä myös ohjelmistoalan
+      töitä opintojeni ohella ja vapaa-aikaani olen käyttänyt omien, lähinnä web-pohjaisten,
       ohjelmistoprojektien väsäämiseen. Nautin ohjelmistotyössä eniten siitä, että pystyn oman
       osaamiseni avulla tuottamaan aidosti hyötyä käyttäjille/asiakkaille.
     `,
-    image: iiro,
-    skills: [
-      'JavaScript/TypeScript',
-      'Node.js',
-      'React',
-      'Java',
-      'C++',
-      'Python',
-      'SQL',
-      'MongoDB',
-      'Git (GitHub/GitLab)',
-      'Docker',
-      'DevOps (Jenkins, GitLab CI, Travis CI)'
-    ]
+    about: 'Olen toteuttanut tämän CV:n Reactin ja GitHub Pagesin avulla.',
+    skills: {
+      major: [
+        'JavaScript/TypeScript',
+        'React',
+        'Node.js',
+        'Java',
+        'Git (GitHub/GitLab)'
+      ],
+      minor: [
+        'C++',
+        'Python',
+        'SQL',
+        'MongoDB',
+        'Docker',
+        'DevOps (Jenkins, GitLab CI, Travis CI)'
+      ]
+    }
   },
   EXPERIENCE: [
     {
@@ -129,7 +140,8 @@ const CV: CurriculumVitae = {
         Rasputin-teekkarilaulukirja on Tampereen teekkariyhteisössä laajalti käytössä oleva laulukirja,
         jolle toteutin full stack -web-sovelluksen. Toteutus sisältää palvelimen ja kaksi käyttöliittymää:
         varsinainen laulukirja ja sisällön hallintapaneeli. Motivaationa toteutukselle oli oman oppimisen lisäksi
-        myös sen koko teekkariyhteisölle tuoma hyöty ja lisäarvo. Käytetyt tekniikat: TypeScript, React, Redux,
+        myös sen koko teekkariyhteisölle tuoma hyöty ja lisäarvo. Projekti on otetty hyvin vastaan ja se alkaa
+        olla tuttu näky teekkaritapahtumissa, joihin liittyy laulua. Käytetyt tekniikat: TypeScript, React, Redux,
         Node.js, Express.
       `,
       image: rasputin,
@@ -140,10 +152,9 @@ const CV: CurriculumVitae = {
       description: `
         Ensimmäinen itse suunnittelemani ja toteuttamani full stack -web-sovellus, joka pohjautuu Full Stack 2020
         -kurssin harjoitustyöhöni. Projektin lähdekoodissa näkyy, että toteutushetkellä ollaan vielä opeteltu
-        full stack -sovellusten kehittämistä, minkä vuoksi näin jälkiviisaana tekisin monen asian toisin. Pidän
-        projektia kuitenkin ylpeänä esillä muistutuksena siitä, että jostain on aina lähdettävä liikkeelle ja kuinka
-        paljon oma osaamiseni on kehittynyt projektin jälkeen :) Käytetyt tekniikat: JavaScript, React, Redux,
-        Node.js, Express.
+        full stack -sovellusten kehittämistä, minkä vuoksi näin jälkiviisaana toteuttaisin monen asian toisin. Pidän
+        projektia kuitenkin ylpeänä esillä muistutuksena siitä, että jostain on lähdetty liikkeelle :) Käytetyt
+        tekniikat: JavaScript, React, Redux, Node.js, Express.
       `,
       image: eventCalendar,
       link: 'https://github.com/iiroki-projects/event-calendar-fullstack'

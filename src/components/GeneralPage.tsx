@@ -12,10 +12,18 @@ const GeneralPage: React.FC = () => (
     <p>
       {CV.GENERAL.description}
     </p>
+    <p>
+      {CV.GENERAL.about && CV.GENERAL.about}
+    </p>
     <h2 className='page-title'>Osaaminen</h2>
     {
-      CV.GENERAL.skills.map(i => (
-        <Tag className='skill-tag' key={i}>{i}</Tag>
+      CV.GENERAL.skills.major.map(i => (
+        <Tag className='skill-tag skill-tag-major' key={i}>{i}</Tag>
+      ))
+    }
+    {
+      CV.GENERAL.skills.minor.map(i => (
+        <Tag className='skill-tag skill-tag-minor' key={i}>{i}</Tag>
       ))
     }
   </PageBase>
