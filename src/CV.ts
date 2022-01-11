@@ -50,7 +50,7 @@ const CV: CurriculumVitae = {
         Rasputin-teekkarilaulukirja on Tampereen teekkariyhteisössä laajalti käytössä oleva laulukirja,
         jolle toteutin full stack -web-sovelluksen. Toteutus sisältää palvelimen ja kaksi käyttöliittymää:
         varsinaisen laulukirjan ja sisällön hallintapaneelin. Motivaationa toteutukselle oli oman oppimisen lisäksi
-        myös sen koko teekkariyhteisölle tuoma hyöty ja lisäarvo. Projekti on otetty hyvin vastaan ja se alkaa
+        myös sen koko teekkariyhteisölle tuoma hyöty ja lisäarvo. Projekti on otettu hyvin vastaan ja se alkaa
         olla tuttu näky teekkaritapahtumissa, joihin liittyy laulua. Käytetyt tekniikat: TypeScript, React, Node.js,
         Express.
       `,
