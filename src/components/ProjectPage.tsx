@@ -13,12 +13,12 @@ const ProjectPage: React.FC = () => (
           href={i.link}
           target='_blank'
           rel='noopener noreferrer'
+          style={{ width: '100%' }}
         >
           <Card
             className='project'
             hoverable
             cover={i.image && <img src={i.image} alt={i.title} />}
-            style={{ width: '100%' }}
             >
             <Card.Meta title={<h3>{i.title}</h3>} />
             <Card.Meta description={i.description} />

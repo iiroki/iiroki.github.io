@@ -1,43 +1,7 @@
-import { EventTimelineItem } from './interfaces/EventTimelineItem'
-import { Social } from './interfaces/Social'
+import { CurriculumVitae } from './interfaces/CurriculumVitae'
 import iiro from './assets/iiro_kiviluoma.jpg'
 import rasputin from './assets/rasputin.png'
 import eventCalendar from './assets/event-calendar-fullstack.png'
-
-interface Skills {
-  readonly major: string[]
-  readonly minor: string[]
-}
-
-interface GeneralInfo {
-  readonly name: string
-  readonly image: string
-  readonly description: string
-  readonly about?: string
-  readonly skills: Skills
-}
-
-interface CardItem {
-  readonly title: string
-  readonly description?: string
-  readonly image?: string
-  readonly link?: string
-}
-
-interface ContactInfo {
-  readonly email: string
-  readonly phone?: string
-  readonly address?: string
-  readonly social?: Social
-}
-
-interface CurriculumVitae {
-  readonly GENERAL: GeneralInfo
-  readonly EXPERIENCE: EventTimelineItem[]
-  readonly EDUCATION: EventTimelineItem[]
-  readonly PROJECTS: CardItem[]
-  readonly CONTACT: ContactInfo
-}
 
 const CV: CurriculumVitae = {
   GENERAL: {
