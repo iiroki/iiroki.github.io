@@ -1,31 +1,35 @@
 import React from 'react'
-import { Card } from 'antd'
+import { List, Card, Image } from 'antd'
 import PageBase from './PageBase'
 import CV from '../CV'
 
 const ProjectPage: React.FC = () => (
   <PageBase>
     <h1 className='page-title'>Projektit</h1>
-    {
-      CV.PROJECTS.map(i => (
-        <a
+    <List
+      split={false}
+      dataSource={CV.PROJECTS}
+      renderItem={i => (
+        <List.Item
           key={i.title}
-          href={i.link}
-          target='_blank'
-          rel='noopener noreferrer'
-          style={{ width: '100%' }}
         >
-          <Card
-            className='project'
-            hoverable
-            cover={i.image && <img src={i.image} alt={i.title} />}
-            >
-            <Card.Meta title={<h3>{i.title}</h3>} />
-            <Card.Meta description={i.description} />
-          </Card>
-        </a>
-      ))
-    }
+          <a
+            href={i.link}
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ width: '100%' }}
+          >
+            <Card
+              hoverable
+              cover={i.image && <Image src={i.image} alt={i.title} preview={false} />}
+              >
+              <Card.Meta title={<h2>{i.title}</h2>} />
+              <Card.Meta description={i.description} />
+            </Card>
+          </a>
+        </List.Item>
+      )}
+    />
   </PageBase>
 )
 

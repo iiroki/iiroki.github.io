@@ -12,7 +12,7 @@
 
 body {
   font-family: open-sans;
-  font-size: 16px;
+  font-size: 1rem;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -53,12 +53,12 @@ body {
 }
 
 .skill-tag-major {
-  font-size: 20px;
+  font-size: 1.2rem;
   padding: 8px 12px;
 }
 
 .skill-tag-minor {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* Experience & Education */
@@ -67,27 +67,27 @@ body {
 }
 
 .timeline-title-main {
-  font-size: 20px;
+  font-size: 1.2rem;
   margin-bottom: 1px;
 }
 
 .timeline-title-sub {
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 1px;
 }
 
 .timeline-list {
-  font-size: 14px;
+  font-size: 0.85rem;
 }
 
 /* Projects */
-.project {
-  margin: 10px;
+.project-cover {
+  padding: 1%;
 }
 
 /* Contact */
 .contact-info {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .social-bar {
@@ -96,11 +96,15 @@ body {
 
 .contact-icon {
   color: #3a668b;
-  font-size: 40px;
+  font-size: 3rem;
   margin: 0 10px;
 }
 
 /* ANTD overrides */
+.ant-image-mask {
+  border-radius: 10px;
+}
+
 .ant-tabs {
   height: 50px !important;
 }

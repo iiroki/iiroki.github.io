@@ -12,7 +12,7 @@ const CV: CurriculumVitae = {
       ohjelmistotuotannon rautaiseksi ammattilaiseksi. Teen tällä hetkellä myös ohjelmistoalan
       töitä opintojeni ohella ja vapaa-aikaani olen käyttänyt omien, lähinnä web-pohjaisten,
       ohjelmistoprojektien väsäämiseen. Nautin ohjelmistotyössä eniten siitä, että pystyn oman
-      osaamiseni avulla tuottamaan aidosti hyötyä käyttäjille/asiakkaille.
+      koodini avulla tuottamaan aidosti hyötyä käyttäjille/asiakkaille.
     `,
     about: 'Olen toteuttanut tämän CV:n Reactin ja GitHub Pagesin avulla.',
     skills: {
@@ -20,8 +20,7 @@ const CV: CurriculumVitae = {
         'JavaScript/TypeScript',
         'React',
         'Node.js',
-        'Java',
-        'Git (GitHub/GitLab)'
+        'Java'
       ],
       minor: [
         'C++',
@@ -29,6 +28,7 @@ const CV: CurriculumVitae = {
         'SQL',
         'MongoDB',
         'Docker',
+        'Git',
         'DevOps (Jenkins, GitLab CI, Travis CI)'
       ]
     }
@@ -39,7 +39,7 @@ const CV: CurriculumVitae = {
       mainTitle: 'Insta',
       subTitle: 'Ohjelmistosuunnittelija Trainee',
       listItems: [
-        'Ohjelmistokehitys (Java, Sping Beans, Maven, SQL)',
+        'Ohjelmistokehitys (Java, Spring Beans, Maven, SQL)',
         'Ohjelmistosuunnittelu asiakasvaatimusten pohjalta'
       ],
       color: '#004b95'
@@ -110,6 +110,14 @@ const CV: CurriculumVitae = {
       `,
       image: rasputin,
       link: 'https://rasputin.fi'
+    },
+    {
+      title: 'Web CV',
+      description: `
+        Tämän Reactin ja GitHub Pagesin avulla toteutetun web-pohjaisen CV:n tehtävänä oli alunperin esitellä omia
+        projektejani, mutta lopulta tämä CV päätyi itsekin tänne. #recursion
+      `,
+      link: 'https://github.com/iiroki/iiroki.github.io'
     },
     {
       title: 'Event Calendar Full Stack',
