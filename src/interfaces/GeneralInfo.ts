@@ -6,4 +6,8 @@ export interface GeneralInfo {
   readonly description: string
   readonly about?: string
   readonly skills: Skills
+  readonly languages: {
+    readonly language: string
+    readonly level: number // 0.0 - 5.0
+  }[]
 }

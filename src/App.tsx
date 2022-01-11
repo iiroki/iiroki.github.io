@@ -18,16 +18,10 @@ enum Page {
   CONTACT = 'contact'
 }
 
-enum Localization {
-  FI = 'fi',
-  EN = 'en'
-}
-
 const SWIPEABLE_ID = 'swipeable'
 
 const App: React.FC = () => {
   const [page, setPage] = React.useState<Page>(Page.GENERAL)
-  const [localication, setLocalization] = React.useState<Localization>(Localization.FI) // TODO
 
   // Swipe navigation
   React.useEffect(() => {
@@ -87,9 +81,9 @@ const App: React.FC = () => {
         tabBarStyle={{ backgroundColor: '#1a2f43', color: '#ffffff', height: 50 }}
       >
         <Tabs.TabPane key={Page.GENERAL} tab='Yleistä' />
-        <Tabs.TabPane key={Page.EXPERIENCE} tab='Työkokemus' />
-        <Tabs.TabPane key={Page.EDUCATION} tab='Koulutus' />
         <Tabs.TabPane key={Page.PROJECTS} tab='Projektit' />
+        <Tabs.TabPane key={Page.EXPERIENCE} tab='Kokemus' />
+        <Tabs.TabPane key={Page.EDUCATION} tab='Koulutus' />
         <Tabs.TabPane key={Page.CONTACT} tab='Yhteystiedot' />
       </Tabs>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Tag } from 'antd'
+import { Image, Tag, Progress, Rate } from 'antd'
 import PageBase from './PageBase'
 import CV from '../CV'
 
@@ -24,6 +24,15 @@ const GeneralPage: React.FC = () => (
     {
       CV.GENERAL.skills.minor.map(i => (
         <Tag className='skill-tag skill-tag-minor' key={i}>{i}</Tag>
+      ))
+    }
+    <h2 className='page-title'>Kielitaito</h2>
+    {
+      CV.GENERAL.languages.map(i => (
+        <span className='language' key={i.language}>
+          {i.language}
+          <Rate disabled allowHalf defaultValue={i.level} style={{ marginLeft: 5 }}/>
+        </span>
       ))
     }
   </PageBase>
