@@ -12,9 +12,9 @@ import './App.css'
 
 enum Page {
   GENERAL = 'general',
+  PROJECTS = 'projects',
   EXPERIENCE = 'experience',
   EDUCATION = 'education',
-  PROJECTS = 'projects',
   CONTACT = 'contact'
 }
 
@@ -57,12 +57,12 @@ const App: React.FC = () => {
     switch (page) {
       case Page.GENERAL:
         return <GeneralPage />
+      case Page.PROJECTS:
+        return <ProjectPage />
       case Page.EXPERIENCE:
         return <ExperiencePage />
       case Page.EDUCATION:
         return <EducationPage />
-      case Page.PROJECTS:
-        return <ProjectPage />
       case Page.CONTACT:
         return <ContactPage />
       default:

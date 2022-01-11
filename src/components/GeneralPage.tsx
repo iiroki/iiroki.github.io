@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Tag, Progress, Rate } from 'antd'
+import { Image, Tag, Rate } from 'antd'
 import PageBase from './PageBase'
 import CV from '../CV'
 
