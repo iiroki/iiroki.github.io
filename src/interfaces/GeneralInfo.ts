@@ -4,7 +4,6 @@ export interface GeneralInfo {
   readonly name: string
   readonly image: string
   readonly description: string
-  readonly about?: string
   readonly skills: Skills
   readonly languages: {
     readonly language: string

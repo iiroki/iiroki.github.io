@@ -14,7 +14,6 @@ const CV: CurriculumVitae = {
       ohjelmistoprojektien väsäämiseen. Nautin ohjelmistotyössä eniten siitä, että pystyn oman
       koodini avulla tuottamaan aidosti hyötyä käyttäjille/asiakkaille.
     `,
-    about: 'Olen toteuttanut tämän CV:n Reactin ja GitHub Pagesin avulla.',
     skills: {
       major: [
         'JavaScript/TypeScript',
@@ -52,8 +51,8 @@ const CV: CurriculumVitae = {
         jolle toteutin full stack -web-sovelluksen. Toteutus sisältää palvelimen ja kaksi käyttöliittymää:
         varsinaisen laulukirjan ja sisällön hallintapaneelin. Motivaationa toteutukselle oli oman oppimisen lisäksi
         myös sen koko teekkariyhteisölle tuoma hyöty ja lisäarvo. Projekti on otetty hyvin vastaan ja se alkaa
-        olla tuttu näky teekkaritapahtumissa, joihin liittyy laulua. Käytetyt tekniikat: TypeScript, React, Redux,
-        Node.js, Express.
+        olla tuttu näky teekkaritapahtumissa, joihin liittyy laulua. Käytetyt tekniikat: TypeScript, React, Node.js,
+        Express.
       `,
       image: rasputin,
       link: 'https://rasputin.fi'
