@@ -167,7 +167,7 @@ const CV: CurriculumVitae = {
   },
   CONTACT: {
     email: 'iirokiviluoma@outlook.com',
-    phone: '+358 0 417 6832',
+    phone: '+358 40 417 6832',
     social: {
       gitHub: 'https://github.com/iiroki',
       linkedIn: 'https://www.linkedin.com/in/iiroki/',
