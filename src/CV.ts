@@ -8,28 +8,28 @@ const CV: CurriculumVitae = {
     name: 'Iiro Kiviluoma',
     image: iiro,
     description: `
-      Hei! Olen 24-vuotias tietotekniikan DI-opiskelija Tampereelta ja tavoitteenani on kasvaa
-      ohjelmistotuotannon rautaiseksi ammattilaiseksi. Teen tällä hetkellä myös ohjelmistoalan
-      töitä opintojeni ohella ja vapaa-aikaani olen käyttänyt omien, lähinnä web-pohjaisten,
-      ohjelmistoprojektien väsäämiseen. Nautin ohjelmistotyössä eniten siitä, että pystyn oman
-      koodini avulla tuottamaan aidosti hyötyä käyttäjille/asiakkaille.
+      Hei! Olen 25-vuotias tietotekniikan DI-opiskelija Tampereelta ja tavoitteenani on kasvaa
+      ohjelmistotuotannon rautaiseksi ammattilaiseksi. Tällä hetkellä työpöydälläni on ohjelmistoalan
+      töiden lisäksi myös parhaillaan käynnissä oleva diplomityöurakka. Vapaa-aikaani olen käyttänyt
+      omien, lähinnä web-pohjaisten, ohjelmistoprojektien väsäämiseen. Nautin ohjelmistotyössä eniten
+      siitä, että pystyn oman koodini avulla tuottamaan aidosti hyötyä käyttäjille.
     `,
     skills: {
       major: [
-        'JavaScript/TypeScript',
-        'React',
+        'TypeScript',
         'Node.js',
-        'Java'
+        'React',
+        'Azure (+ IoT Edge)'
       ],
       minor: [
+        'Docker',
+        'Java',
         'C++',
         'Python',
         'SQL',
         'MongoDB',
-        'Docker',
         'Git',
-        'DevOps (Jenkins, GitLab CI, Travis CI)',
-        'Linux'
+        'DevOps (Jenkins, GitLab CI, Travis CI)'
       ]
     },
     languages: [
@@ -81,7 +81,17 @@ const CV: CurriculumVitae = {
   EXPERIENCE: {
     work: [
       {
-        timeSpan: '2021/05 -',
+        timeSpan: '2021/04 -',
+        mainTitle: 'Insta',
+        subTitle: 'Junior Web & Cloud Developer',
+        listItems: [
+          'Web & Cloud -ohjelmistökehitys: Azure + IoT Edge',
+          'Diplomityö'
+        ],
+        color: '#004b95'
+      },
+      {
+        timeSpan: '2021/05 - 2022/03',
         mainTitle: 'Insta',
         subTitle: 'Ohjelmistosuunnittelija Trainee',
         listItems: [
@@ -122,7 +132,7 @@ const CV: CurriculumVitae = {
     ],
     organization: [
       {
-        timeSpan: '2019 -',
+        timeSpan: '2019 - 2022',
         mainTitle: 'Koneenrakentajakilta',
         listItems: [
           'Puheenjohtaja 2021',
@@ -139,7 +149,10 @@ const CV: CurriculumVitae = {
         timeSpan: '2021 -',
         mainTitle: 'Tampereen yliopisto',
         subTitle: 'Tietotekniikan diplomi-insinööri (120 op)',
-        listItems: ['Pääaine: Ohjelmistotuotanto'],
+        listItems: [
+          'Pääaine: Ohjelmistotuotanto',
+          'Diplomityö: Teollisen OPC UA -datan vieminen pilveen Azure IoT Edge -moduulien avulla'
+        ],
         color: '#4e008e'
       },
       {
