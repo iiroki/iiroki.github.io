@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.5d5e0fe2.css",
-    "main.js": "/static/js/main.5b6b11aa.js",
+    "main.js": "/static/js/main.0fc26a20.js",
     "static/media/rasputin.png": "/static/media/rasputin.a110cb4e544e10f69325.png",
     "static/media/event-calendar-fullstack.png": "/static/media/event-calendar-fullstack.5cd3e010d69c03f59607.png",
     "static/media/iiro_kiviluoma.jpg": "/static/media/iiro_kiviluoma.3245f4c72543799adcec.jpg",
     "index.html": "/index.html",
     "main.5d5e0fe2.css.map": "/static/css/main.5d5e0fe2.css.map",
-    "main.5b6b11aa.js.map": "/static/js/main.5b6b11aa.js.map"
+    "main.0fc26a20.js.map": "/static/js/main.0fc26a20.js.map"
   },
   "entrypoints": [
     "static/css/main.5d5e0fe2.css",
-    "static/js/main.5b6b11aa.js"
+    "static/js/main.0fc26a20.js"
   ]
 }
